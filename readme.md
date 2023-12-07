@@ -68,6 +68,9 @@ curl -O https://detrac-db.rit.albany.edu/Data/DETRAC-Train-Annotations-XML.zip
 curl -O https://detrac-db.rit.albany.edu/Data/DETRAC-Test-Annotations-XML.zip
 
 # unzip annotations
+
+# if on windows,
+# right click > extract all
 unzip DETRAC-Train-Annotations-XML.zip
 unzip DETRAC-Test-Annotations-XML.zip
 
