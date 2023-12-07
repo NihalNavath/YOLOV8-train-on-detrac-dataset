@@ -10,6 +10,10 @@ from utils.path import path_exists, remove_if_exists, make_dirs
 train_data_path = "../../Insight-MVT_Annotation_Train/" 
 test_data_path = "../../Insight-MVT_Annotation_Test/" 
 
+if len(listdir(train_data_path)) < 5:
+    train_data_path = "../../DETRAC-train-data/Insight-MVT_Annotation_Train/" 
+    test_data_path = "../../DETRAC-test-data/Insight-MVT_Annotation_Test/" 
+
 def run_image_preprocess():
     check_if_ready()
 
