@@ -56,16 +56,16 @@ wget https://raw.githubusercontent.com/NihalNavath/YOLOV8-train-on-detrac-datase
 1) dataset and annotation download
 ```bash
 # download images
-wget https://detrac-db.rit.albany.edu/Data/DETRAC-train-data.zip
-wget https://detrac-db.rit.albany.edu/Data/DETRAC-test-data.zip
+curl -O https://detrac-db.rit.albany.edu/Data/DETRAC-train-data.zip
+curl -O https://detrac-db.rit.albany.edu/Data/DETRAC-test-data.zip
 
 # unzip images
 unzip DETRAC-train-data.zip
 unzip DETRAC-test-data.zip
 
 # download annotations
-wget https://detrac-db.rit.albany.edu/Data/DETRAC-Train-Annotations-XML.zip
-wget https://detrac-db.rit.albany.edu/Data/DETRAC-Test-Annotations-XML.zip
+curl -O https://detrac-db.rit.albany.edu/Data/DETRAC-Train-Annotations-XML.zip
+curl -O https://detrac-db.rit.albany.edu/Data/DETRAC-Test-Annotations-XML.zip
 
 # unzip annotations
 unzip DETRAC-Train-Annotations-XML.zip
