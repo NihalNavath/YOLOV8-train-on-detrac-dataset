@@ -103,7 +103,7 @@ pip3 install -r requirements.txt
 
 5. Run the main parser command
 ```bash
-cd YOLOV8-train-on-detrac-dataset
+cd preprocessor
 python parser.py
 #optional cleanup
 rm -rf temp
