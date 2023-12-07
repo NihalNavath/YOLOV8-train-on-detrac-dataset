@@ -33,7 +33,12 @@ def xml_to_yolov8_format(loc: str):
 
     location = xml_loc_train if loc == "train" else xml_loc_test
 
-    global train_backgrounds, test_backgrounds
+    global train_backgrounds, test_backgrounds, xml_loc_test, xml_loc_train
+
+    if len(listdir(location)) < 2:
+        xml_loc_train =  "../../DETRAC-Train-Annotations-XML/DETRAC-Train-Annotations-XML"
+        xml_loc_test =  "../../DETRAC-Test-Annotations-XML/DETRAC-Test-Annotations-XML"
+
     for file_name in listdir(location):
         # use os.path.join to create file paths
         file_path = path.join(location, file_name)
