@@ -79,19 +79,19 @@ rm -rf DETRAC-Test-Annotations-XML.zip
 
 ```
 
-1) Clone this git repo
+2) Clone this git repo
 ```bash
 git clone https://github.com/NihalNavath/YOLOV8-train-on-detrac-dataset.git
 ```
-2. Navigate to cloned repo 
+3) Navigate to cloned repo 
 ```bash
 cd YOLOV8-train-on-detrac-dataset
 ```
 
 **The next step is only required for Linux devices**
-3. create virtual environment (**can skip on certain distros**, but recommended)
+create virtual environment (**can skip on certain distros**, but recommended)
 ```bash
-# following steps only for linux devices!
+# This step is only for linux devices! Skip if you are on Windows.
 python3 -m venv .venv
 source .venv/bin/activate
 ```
