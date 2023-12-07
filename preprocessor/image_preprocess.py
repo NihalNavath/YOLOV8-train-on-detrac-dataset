@@ -10,7 +10,7 @@ from utils.path import path_exists, remove_if_exists, make_dirs
 train_data_path = "../../Insight-MVT_Annotation_Train/" 
 test_data_path = "../../Insight-MVT_Annotation_Test/" 
 
-if len(listdir(train_data_path)) < 5:
+if not os.path.exists(train_data_path):
     train_data_path = "../../DETRAC-train-data/Insight-MVT_Annotation_Train/" 
     test_data_path = "../../DETRAC-test-data/Insight-MVT_Annotation_Test/" 
 
