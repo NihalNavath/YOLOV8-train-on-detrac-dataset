@@ -19,6 +19,13 @@ xml_loc_train =  "../../DETRAC-Train-Annotations-XML"
 xml_loc_test =  "../../DETRAC-Test-Annotations-XML"
 temp_annotations_loc =  "../temp"
 
+if len(listdir(xml_loc_train)) < 5:
+    xml_loc_train =  "../../DETRAC-Train-Annotations-XML/DETRAC-Train-Annotations-XML"
+    xml_loc_test =  "../../DETRAC-Test-Annotations-XML/DETRAC-Test-Annotations-XML"
+
+assert len(listdir(xml_loc_train)) > 5
+assert len(listdir(xml_loc_test)) > 5
+
 train_backgrounds, test_backgrounds = 0, 0
 
 IMAGE_WIDTH = 960
@@ -30,19 +37,9 @@ def xml_to_yolov8_format(loc: str):
     Args:
         loc (str): indicator for train/test dataset
     """
-
     location = xml_loc_train if loc == "train" else xml_loc_test
 
     global train_backgrounds, test_backgrounds
-
-    if len(listdir(location)) < 2:
-        xml_loc_train_local =  "../../DETRAC-Train-Annotations-XML/DETRAC-Train-Annotations-XML"
-        xml_loc_test_local =  "../../DETRAC-Test-Annotations-XML/DETRAC-Test-Annotations-XML"
-    else:
-        xml_loc_train_local = xml_loc_train
-        xml_loc_test_local = xml_loc_test
-
-    location = xml_loc_train_local if loc == "train" else xml_loc_test_local
 
     for file_name in listdir(location):
         # use os.path.join to create file paths
