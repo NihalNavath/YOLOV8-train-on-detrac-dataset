@@ -42,6 +42,8 @@ def xml_to_yolov8_format(loc: str):
         xml_loc_train_local = xml_loc_train
         xml_loc_test_local = xml_loc_test
 
+    location = xml_loc_train_local if loc == "train" else xml_loc_test_local
+
     for file_name in listdir(location):
         # use os.path.join to create file paths
         file_path = path.join(location, file_name)
